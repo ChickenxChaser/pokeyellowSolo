@@ -15,8 +15,11 @@ PrintBeginningBattleText:
 	ldpikacry e, PikachuCry37
 	jr c, .asm_f4026
 	ldpikacry e, PikachuCry11
-.asm_f4026
-	callfar PlayPikachuSoundClip
+.asm_f4026                                        ;modified to play starter sound effects instead of PIKACHU
+	;callfar PlayPikachuSoundClip
+	;jr .continue
+	ld a, [wEnemyMonSpecies2]
+	call PlayCry
 	jr .continue
 .notPikachuBattle
 	ld a, [wEnemyMonSpecies2]

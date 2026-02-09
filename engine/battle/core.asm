@@ -1795,8 +1795,8 @@ SendOutMon:
 	call RunPaletteCommand
 	ld hl, wEnemyBattleStatus1
 	res USING_TRAPPING_MOVE, [hl]
-	;callfar IsThisPartyMonStarterPikachu
-	;jr c, .starterPikachu
+	callfar IsThisPartyMonStarterPikachu
+	jr c, .starterPikachu
 	ld a, $1
 	ldh [hWhoseTurn], a
 	ld a, POOF_ANIM

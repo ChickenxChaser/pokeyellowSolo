@@ -169,7 +169,7 @@ StartMenu_Pokemon::
 	res BIT_SURF_ALLOWED, [hl]
 	jp z, .loop
 	ld a, [wCurPartySpecies]
-	cp STARTER_PIKACHU
+	cp STARTER
 	jr z, .surfingPikachu
 	ld a, $1
 	jr .continue
